@@ -1,0 +1,112 @@
+@import "variables.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  header {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 1rem;
+  }
+  main {
+    display: grid;
+    grid-auto-rows: min-content;
+    section {
+      display: grid;
+      width: 100%;
+      place-items: center;
+      /* orangebg FORM SECTION */
+      form {
+        width: 100%;
+        max-width: 700px;
+        display: grid;
+        padding: 1rem;
+        gap: 1rem;
+        div {
+          display: grid;
+          input {
+            height: 1.5rem;
+          }
+          input[type="number"] {
+            width: fit-content;
+            -moz-appearance: textfield;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+            }
+          }
+        }
+        button {
+          background-color: var(--button);
+          width: fit-content;
+          font-size: 1.5rem;
+          color: var(--secondary);
+          padding: 0.5rem;
+          border-radius: 0.25rem;
+          cursor: pointer;
+        }
+      }
+      /* orangebg OUTPUT TABLE */
+      output {
+        display: grid;
+        padding: 1rem;
+        max-width: 700px;
+        width: 100%;
+        table {
+          outline: 1px solid black;
+          tr {
+            display: grid;
+            grid-template-columns: 4fr 4fr 1fr 1fr;
+            th {
+              background-color: var(--secondary);
+              color: var(--primary);
+              padding: 0.25rem;
+            }
+            td {
+            
+            }
+            td[aria-label="year"] {
+              text-align: end;
+            }
+            td[aria-label="delete"] {
+                text-align: center;
+                button{
+                    background-color: transparent;
+                    border: transparent;
+                    cursor: pointer;
+                       img{
+                    aspect-ratio: 1;
+
+                }
+                }
+             
+              }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 1rem;
+  }
+}
+.threat{
+  animation: fadeIn 5s 1;
+}
+@keyframes fadeIn {
+  0%{
+    transform: scale(0%);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}

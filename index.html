@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/script.js"></script>
+    <title>Home | music CDs</title>
+  </head>
+  <body>
+    <header><h1>Music CDs</h1></header>
+    <main>
+      <section>
+        <form action="">
+          <div>
+            <label for="cdAuthor">Author</label>
+            <input type="text" id="cdAuthor" name="cdAuthor" placeholder="TOOL" />
+          </div>
+          <div>
+            <label for="cdTitle">Title</label>
+            <input type="text" id="cdTitle" name="cdTitle" placeholder="Lateralus" />
+          </div>
+          <div>
+            <label for="cdYear">Year</label
+            ><input
+              type="number"
+              id="cdYear"
+              pattern="[0-9]{4}"
+              inputmode="numeric"
+              name="cdYear"
+              placeholder="2001"
+            />
+          </div>
+          <button>Add</button>
+        </form>
+      </section>
+      <section>
+        <output>
+          <table id="cdOutput">
+            <thead>
+              <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>year</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody></table
+        ></output>
+      </section>
+    </main>
+    <footer>&copy; EK webdevelopment 2000bc - 2025ad</footer>
+    <!-- @template for row in our table -->
+    <template id="cdRow">
+      <tr>
+        <td aria-label="author"></td>
+        <td aria-label="title"></td>
+        <td aria-label="year"></td>
+        <td aria-label="delete">
+          <button><img src="assets/trash-2.svg" alt="" /></button>
+        </td>
+      </tr>
+    </template>
+  </body>
+</html>
